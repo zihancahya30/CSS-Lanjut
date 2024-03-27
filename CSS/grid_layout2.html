@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-
-        <style>
-            .grid-container {
-                display: grid;
-                grid-gap: 50px;
-                grid-template-columns: 10px 500px 20px 10px;
-                background-color: #2196F3;
-                padding: 10px;
-            }
-            .item1 {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                background-color: rgba(255, 255, 255, 0.8);
-                padding: 20px;
-                grid-column: 1/4;
-            }
-            .item {
-                background-color: rgba(255, 255, 255, 0.8);
-                border: 1px solid rgba(0, 0, 0, 0.8);
-                padding: 20px;
-                font-size: 30px;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="grid-container">
-            <div class="item1">1</div>
-            <div class="item1">2</div>
-            <div class="item1">3</div>
-            <div class="item1">4</div>
-            <div class="item1">5</div>
-            <div class="item1">6</div>
-            <div class="item1">7</div>
-            <div class="item1">8</div>
-            <div>Kesimpulan : Kode menggunakan CSS Grid untuk membuat tata letak grid dengan jarak antara elemen sebesar 50 piksel, 
-                sementara elemen dengan kelas `.item1` diberi aturan khusus untuk menempati dua kolom grid.</div>
-            <div>Kesimpulan skenario 1 : Penambahan grid-row: 1/4; menyebabkan elemen dengan kelas .item1 untuk menempati tiga baris grid vertikal mulai dari baris pertama hingga baris ketiga.</div>
-            <div>Kesimpulan skenario 2 : grid-column: 1/4; menyebabkan elemen dengan kelas .item1 untuk menempati tiga kolom grid horizontal mulai dari kolom pertama hingga kolom ketiga.</div>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridLayout2</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-gap: 50px;
+        background-color: #2196F3;
+        padding: 10px;
+        grid-template-columns: 10px 500px 20px 10px;
+    }
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+    }
+    .item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    <div>
+        Kesimpulan dari program tersebut adalah kelas grid-container mengatur elemen-elemen dalam sebuah grid. 
+        Dimana grid memiliki jarak, bg color, dan padding yg sudah diatur. Kemudian elemen dengan kelas item 1 dan item 
+        akan ditempatkan didalam grid. Kemudian untuk kelas item1 memiliki properti grid-column-start: 1 dan 
+        grid-column-end: 3, yang berarti elemen ini akan mengisi dua kolom pertama dari grid. Sedangkan untuk 
+        elemen dengan kelas .item memiliki latar belakang semi-transparan putih, batas hitam, dan padding yang sudah ditetapkan.
+        program tersebut menghasilkan tata letak grid dengan dua kolom pertama yang diisi oleh elemen .item1, diikuti oleh elemen .item.
+    </div>
+    <br>
+    <div>
+        Kesimpulan dari skenario 2 adalah disini saya ubah grid-column-end:5. Artinya elemen dengan class item1 akan 
+        menempati kolom 1-5. Sedangkan untuk elemen yang memiliki kelas item, akan mengisi kolom sejauh 2-5 (4 kolom).
+        Dan sisanya menempati baris baru.
+    </div>
+    <br>
+    <div>
+        Kesimpulan dari skenario 3 adalah mengatur lebar kolom dengan menggunakan properti grid-template-columns.
+        1. grid-template-columns: auto auto auto auto, grid akan memiliki 4 kolom dengan lebar yg disesuaikan otomatis berdasarkan
+        konten di setiap kolom.
+        2. grid-template-columns: auto auto, grid akan memiliki 2 kolom dengan lebar yg disesuaikan otomatis berdasarkan
+        konten di setiap kolom.
+        3. grid-template-columns: 70px 300px auto 40px, menetapkan lebar kolom dengan lebih spesifik. Kolom pertama akan memiliki lebar 70px.
+        Kolom kedua akan memiliki lebar 300px. Kolom ketiga akan menyesuaikan lebarnya berdasarkan sisa ruang yang tersedia dalam grid.
+        Kolom keempat akan memiliki lebar 40px.
+        4. grid-template-columns: 10px 500px 20px 10px, Kolom pertama akan memiliki lebar 10px. Kolom kedua akan memiliki lebar 500px.
+        Kolom ketiga akan memiliki lebar 20px. Kolom keempat akan memiliki lebar 10px.
+    </div>
+</body>
 </html>
