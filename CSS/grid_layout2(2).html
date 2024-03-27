@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridLayout2</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-gap: 50px;
+        background-color: #2196F3;
+        padding: 10px;
+        grid-template-columns: auto auto auto auto;
+    }
+    .item1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column: 1/4;
+    }
+    .item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    <div>
+        Kesimpulan skenario 1 adalah properti grid-grow:1/4 menandakan bahwa elemen tersebut
+        akan memanjang dari baris pertama hingga sebelum baris keempat dalam grid. Jadi, elemen 
+        akan mengisi dari baris pertama hingga sebelum baris keempat dalam grid.
+    </div>
+    <br>
+    <div>
+        Kesimpulan skenario 2 adalah properti grid-column:1/4 menandakan bahwa elemen tersebut 
+        akan memanjang dari kolom pertama hingga sebelum kolom keempat dalam grid. Jadi, elemen 
+        akan mengisi dari kolom pertama hingga sebelum kolom keempat dalam grid.
+    </div>
+</body>
+</html>
