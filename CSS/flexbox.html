@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Flex Box</title>
+
+        <style>
+            .wadah_flex {
+                /*menjadi fleksibel dengan mengatur property display dengan nilai flex. */
+                display: flex;
+                background-color: rgb(252, 87, 87);
+                flex-direction: row;
+                flex-flow: row wrap; /*flex-flow digunakan untuk menggabungkan flex-direction dan flex-wrap*/
+                justify-content: center; /*digunakan untuk mengatur content*/
+            }
+            .wadah_flex> div {
+                background-color: rgb(4, 6, 5);
+                margin: 10px;
+                padding: 2px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wadah_flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </body>
+    <p>Kesimpulan skenario 1 adalah : Penggunaan <b>CSS Flexbox</b> dapat memudahkan kita 
+        untuk mengatur tata letak elemen-elemen di dalam sebuah wadah dengan lebih fleksibel dan responsif. 
+        Dalam skenario ini, elemen-elemen tersebut diatur secara horizontal dalam wadah flexbox.</p>
+    <p>Kesimpulan skenario 2 adalah: Perubahan pada setiap div anak dari class wadah-flex diantaranya terdapat  warna pada latar belakang, 
+        menambahkan margin membuatnya memiliki jarak 10 piksel di sekelilingnya, penambahan padding 2 piksel membuat 
+        div anak terdapat ruang tambahan di dalam elemen diantara konten dan tepi elemen itu sendiri, 
+        lalu yang terakhir menambahkan ukuran font untuk setiap elemen anak menjadi lebih besar dari ukuran defaultnya.</p>
+    <p>Kesimpulan skenario 3 adalah : Penambahan kode <b>flex-direction</b> memberikan fleksibilitas tambahan dalam pengaturan tata letak elemen-elemen dalam wadah flexbox, 
+        baik secara horizontal maupun vertikal, sesuai dengan kebutuhan desain yang diinginkan.</p>
+    <p>Kesimpulan skenario 4 adalah : Menambahkan kode <b>flex-wrap: wrap-reverse</b> berarti mengizinkan pembungkusan elemen-elemen, tetapi dimulai dari baris atau kolom terbalik.</p>
+    <p>Kesimpulan skenario 5 adalah : Properti flex-flow menggabungkan flex-direction dan flex-wrap, 
+        lalu juga memberikan cara yang lebih ringkas untuk mengontrol arah dan pembungkusan elemen-elemen dalam wadah flexbox.</p>
+    <p>Kesimpulan skenario 6 adalah : Penambahan properti <b>justify-content: center;</b> membuat konten didalam wadah flexbox terpusat secara horizontal atau di tengah.</p>
+</html>
